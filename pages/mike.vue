@@ -1,6 +1,23 @@
 <template>
   <v-row justify="center" align="center">
     <v-col cols="12" sm="12" md="12">
+      <v-autocomplete
+        :items="items"
+        outlined
+        dense
+        chips
+        small-chips
+        label="Autocomplete"
+      />
+    </v-col>
+    <v-col cols="12" sm="12" md="12">
+      <v-select
+        :items="items"
+        label="Combo"
+        solo
+      />
+    </v-col>
+    <v-col cols="12" sm="12" md="12">
       <v-footer
         color="primary lighten-1"
         padless
@@ -40,13 +57,8 @@ export default {
       'Services',
       'Blog',
       'Contact Us',
-      'BISS',
-      'SGC',
-      'SEMINUEVOS',
-      'KONFIDENCE',
-      'Trabeje',
-      'New'
     ],
+    items: ['foo', 'bar', 'fizz', 'buzz'],
   }),
 }
 </script>
